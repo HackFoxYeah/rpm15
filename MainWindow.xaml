@@ -1,0 +1,38 @@
+﻿<Window x:Name="mainWindow" x:Class="practWorkNumber14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        mc:Ignorable="d"        
+        Title="ПрактическаяРаботаНомерПятнадцать" Height="367" Width="500" MinHeight="367" MinWidth="500" Icon="/bmp/istockphoto-1197747580-612x612.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="2,18,2,0" Panel.ZIndex="2" Height="201" VerticalAlignment="Top"/>
+        <Menu Height="44" VerticalAlignment="Top">
+            <MenuItem Header="Окно">
+                <MenuItem Header="Закрыть" >
+                    <MenuItem.Icon>
+                        <Image Source="/bmp/close.bmp"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Функции">
+                <MenuItem Header="Выполнить">
+                    <MenuItem.Icon>
+                        <Image Source="/bmp/accomplish.bmp"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Button 
+            x:Name="BtnCrtTable"
+            Content="    Работа&#xD;&#xA;с таблицей"
+            Margin="171,241,165,32" 
+            FontSize="20" Click="BtnCrtTable_Click" FontStyle="Italic"/>
+    </Grid>
+</Window>
